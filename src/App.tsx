@@ -15,6 +15,9 @@ import Home from "./pages/Dashboard/Home";
 // BBPS
 import HomePage from "./pages/Application/Dashboard/HomePage";
 import ElectricityPage from "./pages/Application/Services/ElectricityPage";
+import ElectricityInvoicePage from "./pages/Application/Services/ElectricityInvoicePage";
+import ComplaintAndTrackingPage from "./pages/Application/Complaint/ComplaintAndTrackingPage";
+import SearchComplaintPage from "./pages/Application/Complaint/SearchComplaintPage";
 
 export default function App() {
   return (
@@ -40,6 +43,11 @@ export default function App() {
             {/*BBPS  */}
           <Route path="/home" element={<HomePage />} />
           <Route path="/electricity" element={<ElectricityPage />} />
+          <Route path="/complaint" element={<ComplaintAndTrackingPage />} />
+          <Route path="/complaint/search" element={<SearchComplaintPage />} />
+
+
+          <Route path="/electricity/invoice" element={<ElectricityInvoicePage />} />
 
           </Route>
 

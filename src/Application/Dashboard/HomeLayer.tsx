@@ -1,5 +1,26 @@
 import { Link } from "react-router";
 import BBPSHeader from "../../components/Application/BBPSHeader";
+import dth from "../../icons/logos/services/dth.svg"
+import mobile from "../../icons/logos/services/mobile.svg"
+import water from "../../icons/logos/services/water.svg"
+import boardband from "../../icons/logos/services/boardband.svg"
+import electricity from "../../icons/logos/services/light.svg"
+import cable from "../../icons/logos/services/cable.svg"
+import creditcard from "../../icons/logos/services/credit.svg"
+import FASTag from "../../icons/logos/services/FASTag.svg"
+import housing from "../../icons/logos/services/housing.svg"
+import insrance from "../../icons/logos/services/insrance.svg"
+import gas from "../../icons/logos/services/gas.svg"
+import municpal from "../../icons/logos/services/municpal.svg"
+import rental from "../../icons/logos/services/rental.svg"
+import nps from "../../icons/logos/services/nps.svg"
+import loan from "../../icons/logos/services/loan.svg"
+import mobileostpaid from "../../icons/logos/services/mobileostpaid.svg"
+import gasfil from "../../icons/logos/services/gasfil.svg"
+import video from "../../icons/logos/services/video.svg"
+import donation from "../../icons/logos/services/donation.svg"
+
+
 
 // Define interfaces for TypeScript type safety
 interface MenuItem {
@@ -8,12 +29,15 @@ interface MenuItem {
   path: string;
 }
 
-// Define data for Recharge and PayBill
 const Recharge: MenuItem[] = [
-  { name: "DTH", img: "https://via.placeholder.com/64?text=DTH", path: "/dth" },
+  { 
+    name: "DTH", 
+    img: dth, // Satellite dish, black-and-white
+    path: "/dth"
+  },
   {
     name: "Prepaid",
-    img: "https://via.placeholder.com/64?text=Prepaid",
+    img: mobile, // Mobile phone, black-and-white
     path: "/prepaid",
   },
 ];
@@ -21,137 +45,128 @@ const Recharge: MenuItem[] = [
 const PayBill: MenuItem[] = [
   {
     name: "Water",
-    img: "https://via.placeholder.com/64?text=Water",
-    path: "/water",
+    img: water,  path: "/water",
   },
   {
     name: "Broadband",
-    img: "https://via.placeholder.com/64?text=Broadband",
-    path: "/broadband",
+    img: boardband,path: "/broadband",
   },
   {
     name: "Electricity",
-    img: "https://via.placeholder.com/64?text=Electricity",
-    path: "/electricity",
+    img:electricity ,  path: "/electricity",
   },
   {
     name: "Cable TV",
-    img: "https://via.placeholder.com/64?text=Cable+TV",
-    path: "/cable-tv",
+img:cable
+    ,    path: "/cable-tv",
   },
   {
     name: "Credit Card",
-    img: "https://via.placeholder.com/64?text=Credit+Card",
-    path: "/credit-card",
+img:creditcard
+    ,    path: "/credit-card",
   },
   {
     name: "Fast Tag",
-    img: "https://via.placeholder.com/64?text=Fast+Tag",
-    path: "/fast-tag",
+img:FASTag
+    ,    path: "/fast-tag",
   },
   {
     name: "Housing Society",
-    img: "https://via.placeholder.com/64?text=Housing+Society",
-    path: "/housing-society",
+img:housing
+    ,    path: "/housing-society",
   },
   {
     name: "Life Insurance",
-    img: "https://via.placeholder.com/64?text=Life+Insurance",
-    path: "/life-insurance",
+img:insrance
+    ,    path: "/life-insurance",
   },
   {
     name: "LPG Gas",
-    img: "https://via.placeholder.com/64?text=LPG+Gas",
-    path: "/lpg-gas",
+img:gas
+    ,    path: "/lpg-gas",
   },
   {
-    name: "Municipal TAX",
-    img: "https://via.placeholder.com/64?text=Municipal+TAX",
-    path: "/municipal-tax",
+    name: "Municipal Tax",
+img:municpal
+    ,    path: "/municipal-tax",
   },
   {
     name: "Post Paid",
-    img: "https://via.placeholder.com/64?text=Post+Paid",
-    path: "/post-paid",
+    img: mobileostpaid,
+       path: "/post-paid",
   },
   {
     name: "Donation",
-    img: "https://via.placeholder.com/64?text=Donation",
+    img:donation    ,
     path: "/donation",
   },
   {
     name: "Education Fees",
-    img: "https://via.placeholder.com/64?text=Education+Fees",
-    path: "/education-fees",
+    img: loan,  path: "/education-fees",
   },
   {
     name: "Hospital & Pathology",
-    img: "https://via.placeholder.com/64?text=Hospital+Pathology",
+    img: "https://cdn-icons-png.flaticon.com/64/1904/1904110.png", // Microscope, black-and-white
     path: "/hospital-pathology",
   },
   {
     name: "Municipal Services",
-    img: "https://via.placeholder.com/64?text=Municipal+Services",
-    path: "/municipal-services",
+    img: municpal,  path: "/municipal-services",
   },
   {
     name: "Recurring Deposit",
-    img: "https://via.placeholder.com/64?text=Recurring+Deposit",
-    path: "/recurring-deposit",
+    img:loan,path: "/recurring-deposit",
   },
   {
     name: "Rental",
-    img: "https://via.placeholder.com/64?text=Rental",
-    path: "/rental",
+    img: rental,  path: "/rental",
   },
   {
     name: "Subscription",
-    img: "https://via.placeholder.com/64?text=Subscription",
-    path: "/subscription",
+    img: video,  path: "/subscription",
   },
   {
     name: "NCMC",
-    img: "https://via.placeholder.com/64?text=NCMC",
-    path: "/ncmc",
+    img: nps,  path: "/ncmc",
   },
   {
     name: "Clubs & Associations",
-    img: "https://via.placeholder.com/64?text=Clubs+Associations",
+    img: "https://cdn-icons-png.flaticon.com/64/681/681494.png", // Group of people, black-and-white
     path: "/clubs-associations",
   },
   {
     name: "Health Insurance",
-    img: "https://via.placeholder.com/64?text=Health+Insurance",
+    img: "https://cdn-icons-png.flaticon.com/64/2693/2693562.png", // Medical shield, black-and-white
     path: "/health-insurance",
   },
   {
     name: "Landline Postpaid",
-    img: "https://via.placeholder.com/64?text=Landline+Postpaid",
-    path: "/landline-postpaid",
+    img: mobile,  path: "/landline-postpaid",
   },
   {
     name: "Loan Repayment",
-    img: "https://via.placeholder.com/64?text=Loan+Repayment",
+    img: "https://cdn-icons-png.flaticon.com/64/744/744955.png", // Money transfer, black-and-white
     path: "/loan-repayment",
   },
   {
     name: "Prepaid Meter",
-    img: "https://via.placeholder.com/64?text=Prepaid+Meter",
+    img: "https://cdn-icons-png.flaticon.com/64/1037/1037130.png", // Meter, black-and-white
     path: "/prepaid-meter",
   },
   {
     name: "Hospital",
-    img: "https://via.placeholder.com/64?text=Hospital",
+    img: "https://cdn-icons-png.flaticon.com/64/2367/2367471.png", // Hospital building, black-and-white
     path: "/hospital",
   },
-  { name: "Gas", img: "https://via.placeholder.com/64?text=Gas", path: "/gas" },
+  {
+    name: "Gas",
+    img:gasfil,  path: "/gas",
+  },
   {
     name: "Insurance",
-    img: "https://via.placeholder.com/64?text=Insurance",
-    path: "/insurance",
+    img: insrance,path: "/insurance",
   },
 ];
-
 // Reusable GridSection component
 interface GridSectionProps {
   title: string;

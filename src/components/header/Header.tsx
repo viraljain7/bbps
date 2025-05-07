@@ -4,6 +4,10 @@ import NotificationDropdown from "./NotificationDropdown";
 import UserDropdown from "./UserDropdown";
 import { Link } from "react-router";
 
+
+import NexaLogo from "../../icons/logos/nexalogo.png"
+import NexaShortLogo from "../../icons/logos/favicon.png"
+
 // Define the interface for the props
 interface HeaderProps {
   onClick?: () => void; // Optional function that takes no arguments and returns void
@@ -79,14 +83,14 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
           </button>
 
           <Link to="/" className="lg:hidden">
-            <img
+          <img
               className="dark:hidden"
-              src="./images/logo/logo.svg"
+              src={NexaLogo}
               alt="Logo"
             />
             <img
               className="hidden dark:block"
-              src="./images/logo/logo-dark.svg"
+              src={NexaShortLogo}
               alt="Logo"
             />
           </Link>
