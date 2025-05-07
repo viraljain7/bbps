@@ -12,7 +12,7 @@ interface BillInfo {
 }
 
 // Mock function to simulate fetching bill info
-const fetchBillInfo = (provider: string, mobile: string): BillInfo => {
+const fetchBillInfo = (): BillInfo => {
   return {
     billNumber: 12301,
     billDate: "01-May-2025",
@@ -106,7 +106,7 @@ const ElectricityPaymentLayer: React.FC = () => {
       isMobileValid &&
       Object.values(formData).every((value) => value.trim() !== "")
     ) {
-      const bill = fetchBillInfo(selectedProvider, mobile);
+      const bill = fetchBillInfo();
       setBillInfo(bill);
       setShowPaymentSection(true);
       setShowABC(false);
